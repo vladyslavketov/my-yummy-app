@@ -6,7 +6,7 @@ export const WelcomePageSection = styled.section`
   align-items: center;
   min-height: 100vh;
 
-  background-breakpoint: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('${process.env.PUBLIC_URL}/images/welcome-page-bg.webp');
@@ -39,7 +39,7 @@ export const WelcomePageLogo = styled.img`
   height: 54px;
   margin-bottom: 28px;
 
-  background: #8baa36;
+  background: ${props => props.theme.global.accent};
   border-radius: 12px;
 
   @media ${minDevice.tablet} {
@@ -59,7 +59,7 @@ export const WelcomePageTitle = styled.h1`
   letter-spacing: -0.02em;
   text-align: center;
   font-feature-settings: 'liga' off;
-  color: #fafafa;
+  color: ${props => props.theme.global.light};
 
   @media ${minDevice.tablet} {
     width: 288px;
@@ -76,7 +76,7 @@ export const WelcomePageText = styled.p`
   line-height: 1.29;
   letter-spacing: -0.02em;
   text-align: center;
-  color: #fafafa;
+  color: ${props => props.theme.global.light};
 
   @media ${minDevice.tablet} {
     width: 505px;
