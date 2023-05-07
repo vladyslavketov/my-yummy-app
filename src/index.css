@@ -11,6 +11,12 @@ code {
     monospace;
 }
 
+div#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 p,
 h1,
 h2,
@@ -43,4 +49,11 @@ input,
 textarea {
   background-color: transparent;
   outline: none;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }

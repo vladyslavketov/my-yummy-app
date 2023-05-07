@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   AuthForm,
   AuthFormBtnSubmit,
@@ -12,11 +13,12 @@ import {
   AuthFormTitle,
   AuthFormValidaMsg,
 } from './AuthForm.styled';
-import AuthFormIconValid from './AuthFormIconValid';
 import { checkPasswordSecure, validateEmail, validateName, validatePassword, validatePasswordSecure } from 'components/Auth/AuthValidate';
+import AuthFormIconValid from './AuthFormIconValid';
+import { register } from 'redux/auth/authOperation';
 
 const RegisterForm = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -68,13 +70,13 @@ const RegisterForm = () => {
 
     const form = e.currentTarget;
 
-    // dispatch(
-    //   register({
-    //     name: form.elements.name.value,
-    //     email: form.elements.email.value,
-    //     password: form.elements.password.value,
-    //   })
-    // );
+    dispatch(
+      register({
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
     form.reset();
   };
 

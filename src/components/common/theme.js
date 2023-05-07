@@ -8,6 +8,9 @@ export const themeLight = Object.freeze({
     pageBgTop: '#FAFAFA',
     pageBgBottom: '#1E1F28',
   },
+  mainTitle: {
+    color: '#001833',
+  },
   footer: {
     footerBGC: '#1E1F28',
   }

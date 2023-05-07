@@ -11,9 +11,11 @@ import {
 } from './AuthForm.styled';
 import AuthFormIconValid from './AuthFormIconValid';
 import { validateEmail, validatePassword } from 'components/Auth/AuthValidate';
+import { useDispatch } from 'react-redux';
+import { logIn } from 'redux/auth/authOperation';
 
 const SigninForm = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const [email, setEmail] = useState('');
   const [emailClass, setEmailClass] = useState('');
@@ -52,13 +54,12 @@ const SigninForm = () => {
 
     const form = e.currentTarget;
 
-    // dispatch(
-    //   register({
-    //     name: form.elements.name.value,
-    //     email: form.elements.email.value,
-    //     password: form.elements.password.value,
-    //   })
-    // );
+    dispatch(
+      logIn({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
     form.reset();
   };
 

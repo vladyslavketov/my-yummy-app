@@ -5,15 +5,15 @@ const Container = styled.div`
   margin: 0 auto;
 
   @media ${minDevice.mobile} {
-    width: ${breakpoint.mobile};
+    width: ${breakpoint.mobile}px;
     padding: 0 16px;
   }
   @media ${minDevice.tablet} {
-    width: ${breakpoint.tablet};
+    width: ${breakpoint.tablet}px;
     padding: 0 32px;
   }
   @media ${minDevice.desktop} {
-    width: ${breakpoint.desktop};
+    width: ${breakpoint.desktop}px;
     padding: 0 100px;
   }
 `;

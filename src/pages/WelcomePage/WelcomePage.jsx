@@ -7,11 +7,12 @@ import {
   WelcomePageSection,
   WelcomePageContainer,
   WelcomePageBox,
-  WelcomePageLogo,
   WelcomePageTitle,
   WelcomePageText,
   WelcomePageNavList,
+  WelcomePageLogo,
 } from './WelcomePage.styled';
+// import Logo from 'components/Logo/Logo';
 
 const WelcomePage = () => {
   const navigate = useNavigate();

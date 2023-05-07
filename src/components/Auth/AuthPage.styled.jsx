@@ -112,6 +112,6 @@ export const AuthPageNavLink = styled(NavLink)`
   color: ${props => props.theme.global.light};
 
   &:hover, :focus {
-    color: ${props => props.theme.global.accent};;
+    color: ${props => props.theme.global.accent};
   }
 `;

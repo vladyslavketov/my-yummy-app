@@ -4,6 +4,12 @@ export const breakpoint = {
   desktop: 1440,
 };
 
+// export const breakpointPx = {
+//   mobile: `${breakpoint.mobile}px`,
+//   tablet: `${breakpoint.tablet}px`,
+//   desktop: `${breakpoint.desktop}px`,
+// };
+
 export const minDevice = {
   mobile: `(min-width: ${breakpoint.mobile}px)`,
   tablet: `(min-width: ${breakpoint.tablet}px)`,

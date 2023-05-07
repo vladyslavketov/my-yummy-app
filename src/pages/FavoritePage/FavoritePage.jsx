@@ -1,12 +1,12 @@
 import MainTitle from "components/MainTitle/MainTitle";
 import Container from "components/common/Container.styled";
 
-const MainPage = () => {
+const FavoritePage = () => {
   return (
     <Container>
-      <MainTitle title={'Main Page'} />
+      <MainTitle title={'Favorites'} />
     </Container>
   )
 };
 
-export default MainPage;
+export default FavoritePage;

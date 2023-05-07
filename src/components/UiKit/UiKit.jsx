@@ -1,3 +1,5 @@
+import MainTitle from "components/MainTitle/MainTitle";
+import Container from "components/common/Container.styled";
 import {
   BtnRectBlack,
   BtnRectGreen,
@@ -9,7 +11,8 @@ import {
 
 const UiKit = () => {
   return (
-    <>
+    <Container>
+      <MainTitle title={'Ui Kit'} />
       <div style={{display: 'flex', gap: 16, padding: 20}}>
         <BtnRectBlack>Press Me</BtnRectBlack>
         <BtnRectGreen>Press Me</BtnRectGreen>
@@ -20,7 +23,7 @@ const UiKit = () => {
         <BtnOvalGreen>Press Me</BtnOvalGreen>
         <BtnOvalTransparent>Press Me</BtnOvalTransparent>
       </div>
-    </>
+    </Container>
   );
 };
 

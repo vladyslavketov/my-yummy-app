@@ -1,12 +1,12 @@
 import MainTitle from "components/MainTitle/MainTitle";
 import Container from "components/common/Container.styled";
 
-const MainPage = () => {
+const CategoriesPage = () => {
   return (
     <Container>
-      <MainTitle title={'Main Page'} />
+      <MainTitle title={'Categories'} />
     </Container>
-  )
+  );
 };
 
-export default MainPage;
+export default CategoriesPage;

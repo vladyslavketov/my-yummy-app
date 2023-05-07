@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { breakpoint, minDevice } from 'components/common/breakpoints';
+import { LogoImg } from 'components/Logo/Logo.styled';
 
 export const WelcomePageSection = styled.section`
   display: flex;
@@ -34,13 +35,10 @@ export const WelcomePageBox = styled.div`
   align-items: center;
   flex-direction: column;
 `;
-export const WelcomePageLogo = styled.img`
+export const WelcomePageLogo = styled(LogoImg)`
   width: 54px;
   height: 54px;
   margin-bottom: 28px;
-
-  background: ${props => props.theme.global.accent};
-  border-radius: 12px;
 
   @media ${minDevice.tablet} {
     width: 68px;
