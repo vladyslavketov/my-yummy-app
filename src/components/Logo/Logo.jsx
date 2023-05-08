@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
-import { LogoImg } from "./Logo.styled";
+import { LogoImg, LogoLink, LogoText } from './Logo.styled';
 
-const Logo = () => {
+const Logo = ({ newClass }) => {
   return (
-    <Link to="/">
+    <LogoLink to="/">
       <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.svg`} />
-    </Link>
+      {newClass && <LogoText className={newClass}>So Yummy</LogoText>}
+    </LogoLink>
   );
 };
 
 export default Logo;
+
+// TODO - logo form IMG to SVG
+// TODO - add hover & focus to svg

@@ -5,14 +5,23 @@ export const themeLight = Object.freeze({
     dark: '#22252A',
   },
   auth: {
-    pageBgTop: '#FAFAFA',
-    pageBgBottom: '#1E1F28',
+    bgColorPageTop: '#FAFAFA',
+    bgColorPageBottom: '#1E1F28',
   },
   mainTitle: {
     color: '#001833',
   },
+  navigation: {
+    colorNavLinkHeader: '#23262A',
+    colorNavLinkFooter: '#FAFAFA',
+  },
+  socialMedia: {
+    colorIcon: '#8BAA36',
+    colorIconHoverWhite: '#FAFAFA',
+    colorIconHoverBlack: '#1E1F28',
+  },
   footer: {
-    footerBGC: '#1E1F28',
+    bgColor: '#22252A',
   }
 });
 

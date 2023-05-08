@@ -10,7 +10,7 @@ export const AuthPageSection = styled.section`
   justify-content: center;
 
   min-height: 100vh;
-  background: ${props => props.theme.auth.pageBgTop};
+  background: ${props => props.theme.auth.bgColorPageTop};
 `;
 export const AuthPageSectionBg = styled.div`
   position: absolute;

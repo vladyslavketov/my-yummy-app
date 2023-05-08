@@ -3,10 +3,10 @@ import { breakpoint, minDevice } from './breakpoints';
 
 const Container = styled.div`
   margin: 0 auto;
+  padding: 0 16px;
 
   @media ${minDevice.mobile} {
     width: ${breakpoint.mobile}px;
-    padding: 0 16px;
   }
   @media ${minDevice.tablet} {
     width: ${breakpoint.tablet}px;

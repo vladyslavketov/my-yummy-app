@@ -1,15 +1,14 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-size: 14px;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 div#root {
   min-height: 100vh;
@@ -52,8 +51,9 @@ textarea {
 }
 
 .text {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
+  position: absolute;
+  margin-left: auto;
+  flex-direction: column;
+  background-color: #ffffff;
+  transform: translateX(-50%);
 }

@@ -7,7 +7,7 @@ const Header = () => {
     <HeaderTag>
       <HeaderContainer>
         <Logo />
-        <Navigation />
+        <Navigation newClass={"nav__list--header"} />
         <span>UserMenu</span>
       </HeaderContainer>
     </HeaderTag>
