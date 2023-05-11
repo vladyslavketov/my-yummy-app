@@ -6,7 +6,7 @@ const Navigation = ({ newClass }) => {
 
   return (  
     <NavList className={newClass}>
-      {isRenderToHeader && <li><HeaderNav to='/categories/:categoryName'>Categories</HeaderNav></li>}
+      {isRenderToHeader && <li><HeaderNav to='/categories/beef'>Categories</HeaderNav></li>}
       {isRenderToFooter && <li><HeaderNav to='/search'>Ingredients</HeaderNav></li>}
 
       <li><HeaderNav to='/add'>Add recipes</HeaderNav></li>

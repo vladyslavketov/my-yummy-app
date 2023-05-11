@@ -1,7 +1,7 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
 body {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
 
@@ -57,3 +57,4 @@ textarea {
   background-color: #ffffff;
   transform: translateX(-50%);
 }
+

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://t2d-soyammy-backend.onrender.com/api/';
+axios.defaults.baseURL = 'https://yummy-app-backend.onrender.com/api/';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -15,7 +15,8 @@ export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
-      const res = await axios.post('/auth/register', credentials);
+      const res = await axios.post('/users/register', credentials);
+      console.log(res.data);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (e) {
@@ -28,7 +29,7 @@ export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
     try {
-      const res = await axios.post('/auth/login', credentials);
+      const res = await axios.post('/users/login', credentials);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (e) {
@@ -37,7 +38,7 @@ export const logIn = createAsyncThunk(
   }
 );
 
-export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
+export const logOut = createAsyncThunk('users/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/auth/logout');
     clearAuthHeader();
@@ -47,7 +48,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 });
 
 export const refreshUser = createAsyncThunk(
-  'auth/refresh',
+  'users/current',
   async (_, thunkAPI) => {
     const { token } = thunkAPI.getState().auth;
 

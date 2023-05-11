@@ -5,10 +5,11 @@ import { ThemeProvider } from 'styled-components';
 import { refreshUser } from 'redux/auth/authOperation';
 
 import { themeDark, themeLight } from 'components/common/theme';
-import { WelcomePage, RegisterPage, SigninPage, MainPage, CategoriesPage, AddRecipesPage, MyRecipesPage, FavoritePage, ShoppingListPage, SearchPage} from 'pages';
+import { WelcomePage, RegisterPage, SigninPage, MainPage, CategoriesPage, AddRecipesPage, MyRecipesPage, FavoritePage, ShoppingListPage, SearchPage, RecipePage} from 'pages';
 import { PrivateRoute, RestrictedRoute } from 'hooks/useRoute';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import UiKit from 'components/UiKit/UiKit';
+// import { animateScroll } from 'react-scroll';
 
 // const { MainPage } = lazy(() => import('pages'));
 
@@ -22,6 +23,7 @@ const App = () => {
       setRender(0);
       return;
     }
+    // animateScroll.scrollToTop();
     dispatch(refreshUser());
   }, [dispatch, render, setRender]);
 
@@ -38,6 +40,7 @@ const App = () => {
           <Route path="/add" element={<PrivateRoute component={AddRecipesPage} redirectTo="/" />} />
           <Route path="/my" element={<PrivateRoute component={MyRecipesPage} redirectTo="/" />} />
           <Route path="/favorite" element={<PrivateRoute component={FavoritePage} redirectTo="/" />} />
+          <Route path="/recipe/:recipeId" element={<PrivateRoute component={RecipePage} redirectTo="/" />} />
           <Route path="/shopping-list" element={<PrivateRoute component={ShoppingListPage} redirectTo="/" />} />
           <Route path="/search" element={<PrivateRoute component={SearchPage} redirectTo="/" />} />
 
