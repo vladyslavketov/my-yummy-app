@@ -16,6 +16,18 @@ export const getRecipesPreview = createAsyncThunk(
   }
 );
 
+export const getCategoriesList = createAsyncThunk(
+  'recipes/getCategoriesList',
+  async (_, thunkAPI) => {
+    try {
+      const res = await axios.get('/recipes/categories');
+      return res.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
 export const getRecipesByCategory = createAsyncThunk(
   'recipes/getRecipesByCategory',
   // async ({category, page}, thunkAPI) => {

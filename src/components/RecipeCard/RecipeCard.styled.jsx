@@ -6,8 +6,6 @@ export const RecipeCardLink = styled(Link)`
   width: 100%;
 `;
 export const RecipeCardImg = styled.img`
-  // width: 100%;
-
   object-fit: cover;
   border-radius: 8px;
 `;

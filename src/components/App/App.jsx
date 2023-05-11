@@ -9,12 +9,14 @@ import { WelcomePage, RegisterPage, SigninPage, MainPage, CategoriesPage, AddRec
 import { PrivateRoute, RestrictedRoute } from 'hooks/useRoute';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import UiKit from 'components/UiKit/UiKit';
+import useAuth from 'hooks/useAuth';
 // import { animateScroll } from 'react-scroll';
 
 // const { MainPage } = lazy(() => import('pages'));
 
 const App = () => {
   const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
   const [render, setRender] = useState(1);
   const theme = false ? themeDark : themeLight;
 
@@ -27,7 +29,9 @@ const App = () => {
     dispatch(refreshUser());
   }, [dispatch, render, setRender]);
 
-  return (
+  return isRefreshing ? (
+    'Is refreshing data'
+  ) : (
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={ <RestrictedRoute component={WelcomePage} redirectTo="/main" /> }  />
@@ -43,7 +47,6 @@ const App = () => {
           <Route path="/recipe/:recipeId" element={<PrivateRoute component={RecipePage} redirectTo="/" />} />
           <Route path="/shopping-list" element={<PrivateRoute component={ShoppingListPage} redirectTo="/" />} />
           <Route path="/search" element={<PrivateRoute component={SearchPage} redirectTo="/" />} />
-
           <Route path="/ui" element={<PrivateRoute component={UiKit} redirectTo="/" />} />
         </Route>
 
@@ -53,3 +56,6 @@ const App = () => {
 };
 
 export default App;
+
+
+//  <Route path="/main" element={<MainPage />} /> 

@@ -2,18 +2,19 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import { getRecipesByCategory } from "redux/recipes/recipesOperation";
+import { getCategoriesList, getRecipesByCategory } from "redux/recipes/recipesOperation";
 import MainTitle from "components/MainTitle/MainTitle";
 import Container from "components/common/Container.styled";
 import RecipeList from "components/RecipeList/RecipeList";
-import { selectCurrentCategory } from "redux/recipes/recipesSelectors";
+import { selectCategoriesList, selectCurrentCategory } from "redux/recipes/recipesSelectors";
+import CategoriesTab from "components/CategoriesTab/CategoriesTab";
 
 const CategoriesPage = () => {
   const dispatch = useDispatch();
   const { categoryName: name } = useParams();
   const [render, setRender] = useState(1);
+  const categoriesList = useSelector(selectCategoriesList);
   const currentCategory = useSelector(selectCurrentCategory);
-  const currentCategoryRecipes = currentCategory?.recipes;
 
   useEffect(() => {
     if (render) {
@@ -21,13 +22,15 @@ const CategoriesPage = () => {
       return;
     }
 
+    if (!categoriesList) dispatch(getCategoriesList());
     dispatch(getRecipesByCategory({ category: name }));
-  }, [dispatch, name, render]);
+  }, [dispatch, render, categoriesList, name ]);
 
   return (
     <Container>
       <MainTitle title={'Categories'} />
-      {currentCategoryRecipes && <RecipeList recipesList={currentCategoryRecipes} />}
+      <CategoriesTab />
+      {currentCategory?.recipes && <RecipeList />}
     </Container>
   );
 };

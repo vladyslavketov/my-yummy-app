@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import { minDevice } from 'components/common/breakpoints';
 import { BtnOvalTransparent } from 'components/common/Btns.styled';
 
+export const PreviewCategoriesSection = styled.section`
+  padding-top: 64px;
+
+  @media ${minDevice.tablet} {margin-top: 72px}
+  @media ${minDevice.desktop} {margin-top: 100px}
+`;
+
 export const OtherCategoriesBtn = styled(BtnOvalTransparent)`
   width: 195px;
   height: 46px;

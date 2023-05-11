@@ -51,10 +51,13 @@ textarea {
 }
 
 .text {
-  position: absolute;
-  margin-left: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
   flex-direction: column;
-  background-color: #ffffff;
-  transform: translateX(-50%);
+
 }
 

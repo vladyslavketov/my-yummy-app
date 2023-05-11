@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getRecipesByCategory, getRecipesPreview } from './recipesOperation';
+import { getCategoriesList, getRecipesByCategory, getRecipesPreview } from './recipesOperation';
 
 export const recipesSlice = createSlice({
   name: 'recipes',
@@ -11,6 +11,11 @@ export const recipesSlice = createSlice({
       // .addCase(getRecipesPreview.pending, state => {})
       .addCase(getRecipesPreview.fulfilled, (state, action) => {
         state.preview = action.payload.result;
+      })
+      // .addCase(getRecipesPreview.rejected, state => {})
+      // .addCase(getRecipesPreview.pending, state => {})
+      .addCase(getCategoriesList.fulfilled, (state, action) => {
+        state.categoriesList = action.payload.categories;
       })
       // .addCase(getRecipesPreview.rejected, state => {})
       // .addCase(getRecipesPreview.pending, state => {})
