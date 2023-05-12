@@ -14,7 +14,6 @@ const Navigation = ({ newClass }) => {
       <li><HeaderNav to='/favorite'>Favorites</HeaderNav></li>
       <li><HeaderNav to='/shopping-list'>Shopping list</HeaderNav></li>
       {isRenderToHeader && <li><HeaderNav to='/search'>Search</HeaderNav></li>}
-      <li><HeaderNav to='/ui'>UiKit</HeaderNav></li>
     </NavList>
   );
 }

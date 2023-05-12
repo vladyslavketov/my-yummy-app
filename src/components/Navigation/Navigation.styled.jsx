@@ -23,6 +23,7 @@ export const NavList = styled.ul`
     gap: 14px;
 
     @media ${minDevice.tablet} {
+      align-items: start;
       gap: 20px;
     }
     @media ${minDevice.desktop} {

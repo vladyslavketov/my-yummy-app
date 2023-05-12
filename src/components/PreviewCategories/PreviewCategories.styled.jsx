@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { minDevice } from "components/common/breakpoints";
+import { LinkRectGreen } from "components/common/Btns.styled";
 
 export const PreviewCategoriesList = styled.ul`
   display: flex;
@@ -32,6 +33,14 @@ export const PreviewCategoriesItemTitle = styled(Link)`
 
   @media ${minDevice.tablet} {font-size: 44px;};
 `;
-export const PreviewCategoriesItemNavLink = styled(Link)`
+export const PreviewCategoriesItemNavLink = styled(LinkRectGreen)`
+  width: 94px;
+  height: 40px;
   margin-left: auto;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29px;
 `;

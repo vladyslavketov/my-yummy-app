@@ -51,7 +51,7 @@ export const LogoWrap = styled.div`
   @media ${minDevice.tablet} {width: 338px;};
 `;
 export const BenefitsList = styled.ul`
-  width: 338px;
+  width: 420px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -66,15 +66,19 @@ export const BenefitsItem = styled.li`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  line-height: 1.33;
+  font-size: 14px;
+  line-height: 1.29;
   letter-spacing: -0.02em;
   color: #FAFAFA;
 
   // ::marker {
   //   color: green;
   // }
+
+  @media ${minDevice.desktop} {
+    font-size: 18px;
+    line-height: 1.33;
+  };
 `;
 export const FormSubcribeWrap = styled.div`
   display: flex;

@@ -49,7 +49,6 @@ const App = () => {
           <Route path="/search" element={<PrivateRoute component={SearchPage} redirectTo="/" />} />
           <Route path="/ui" element={<PrivateRoute component={UiKit} redirectTo="/" />} />
         </Route>
-
       </Routes>
     </ThemeProvider>
   );

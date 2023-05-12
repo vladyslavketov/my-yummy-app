@@ -1,8 +1,7 @@
-import { HeroBox, HeroBox2, HeroContainer, HeroSection, HeroText, HeroTitle } from "./Hero.styled";
+import { HeroBox, HeroBox2, HeroContainer, HeroDecoreBg, HeroDecoreLeafsLeft, HeroDecoreLeafsRight, HeroDesc, HeroDescWrap, HeroLink, HeroSection, HeroText, HeroTitle } from "./Hero.styled";
 import Search from "components/Search/Search";
 
 const Hero = () => {
-
   return (
     <HeroSection>
       <HeroContainer>
@@ -12,11 +11,19 @@ const Hero = () => {
           <Search></Search>
         </HeroBox>
         <HeroBox2>
-          <p>Delicious and healthy way to enjoy a variety of fresh ingredients in one satisfying meal</p>
+          <HeroDescWrap>
+            <HeroDesc><span>Delicious and healthy</span> way to enjoy a variety of fresh ingredients in one satisfying meal</HeroDesc>
+            <HeroLink to={'/categories/breakfast'}>See recipes</HeroLink>
+          </HeroDescWrap>
         </HeroBox2>
+        <HeroDecoreLeafsLeft />
+        <HeroDecoreLeafsRight />
+        <HeroDecoreBg />
       </HeroContainer>
     </HeroSection>
   )
 }
 
 export default Hero;
+
+// <HeroDecoreLeafsLeft /> 

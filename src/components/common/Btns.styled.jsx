@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const dajc = `
@@ -49,8 +50,6 @@ export const BtnRectGray= styled(BtnRect)`
   }
 `;
 
-
-// const BtnOval = css `
 const BtnOval = styled.button`
   ${dajc}
   flex-shrink: 0;
@@ -84,6 +83,95 @@ export const BtnOvalGreen = styled(BtnOval)`
   }
 `;
 export const BtnOvalTransparent= styled(BtnOval)`
+  color: #FAFAFA;
+
+  background: transparent;
+  border: 2px solid;
+  border-color: #FAFAFA;
+
+  &:hover, :focus {
+    color: #8BAA36;
+    border-color: #8BAA36;
+  }
+`;
+
+// link
+const LinkRect = styled(Link)`
+  ${dajc}
+  flex-shrink: 0;
+  width: 200px;
+  height: 60px;
+
+  font-size: 16px;
+  line-height: 1.12;
+ 
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+`;
+export const LinkRectBlack = styled(LinkRect)`
+  color: #FAFAFA;
+
+  background: #1E1F28;
+
+  &:hover, :focus {
+    color: #8BAA36;
+  }
+`;
+export const LinkRectGreen = styled(LinkRect)`
+  color: #FAFAFA;
+
+  background: #8BAA36;
+
+  &:hover, :focus {
+    color: #23262A;
+  }
+`;
+export const LinkRectGray= styled(LinkRect)`
+  color: #23262A;
+
+  background: #D9D9D9;
+
+  &:hover, :focus {
+    background: transparent;
+    border: 1px solid #23262A;
+  }
+`;
+
+const LinkOval = styled.button`
+  ${dajc}
+  flex-shrink: 0;
+  width: 160px;
+  height: 70px;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  border-radius: 24px 44px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+`;
+export const LinkOvalBlack = styled(LinkOval)`
+  color: #FAFAFA;
+
+  background: #22252A;
+
+  &:hover, :focus {
+    background: #8BAA36;
+  }
+`;
+export const LinkOvalGreen = styled(LinkOval)`
+  color: #FAFAFA;
+
+  background: #8BAA36;
+
+  &:hover, :focus {
+    background: #22252A;
+  }
+`;
+export const LinkOvalTransparent= styled(LinkOval)`
   color: #FAFAFA;
 
   background: transparent;

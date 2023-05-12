@@ -8,7 +8,8 @@ export const RecipesList = styled.ul`
   flex-wrap: wrap;
   row-gap: 100px;
 
-  @media ${minDevice.tablet} {column-gap: 12px;}
+  @media ${minDevice.tablet} {column-gap: 32px;}
+  @media ${minDevice.desktop} {column-gap: 12px;}
 `;
 
 export const RecipesItem = styled.li`
