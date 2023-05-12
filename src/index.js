@@ -9,8 +9,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/yummy-app">
-    {/* <BrowserRouter basename="/"> */}
+    <BrowserRouter basename="yummy-app">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <App />
