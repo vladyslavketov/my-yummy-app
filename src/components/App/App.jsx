@@ -12,6 +12,7 @@ import UiKit from 'components/UiKit/UiKit';
 import useAuth from 'hooks/useAuth';
 import Loading from 'components/Loading/Loading';
 import { animateScroll } from 'react-scroll';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 // import { animateScroll } from 'react-scroll';
 
 // const { MainPage } = lazy(() => import('pages'));
@@ -55,6 +56,9 @@ const App = () => {
           <Route path="/shopping-list" element={<PrivateRoute component={ShoppingListPage} redirectTo="/" />} />
           <Route path="/search" element={<PrivateRoute component={SearchPage} redirectTo="/" />} />
           <Route path="/ui" element={<PrivateRoute component={UiKit} redirectTo="/" />} />
+          <Route path="/*" element={<PrivateRoute component={NotFoundPage} redirectTo="/" />} />
+
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
         </Route>
       </Routes>
     </ThemeProvider>
