@@ -38,6 +38,10 @@ export const HeaderNav = styled(NavLink)`
     height: 40px;
 
     color: ${props => props.theme.navigation.colorNavLinkHeader};
+
+    &.active {
+      color: ${props => props.theme.global.accent};
+    }
   }
 
   .nav__list--footer & {
@@ -50,7 +54,7 @@ export const HeaderNav = styled(NavLink)`
     color: ${props => props.theme.navigation.colorNavLinkFooter};
   }
 
-  &:hover, &:focus, &.active {
+  &:hover, &:focus {
     color: ${props => props.theme.global.accent};
   }
 `;

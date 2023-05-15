@@ -52,4 +52,21 @@ textarea {
   outline: none;
 }
 
-/* .text {} */
+.text {
+position: absolute;
+top: -50%;
+left: -50%;
+transform: translate(-50% -50%);
+
+display: none;
+
+
+display: flex;
+align-items:self-start;
+justify-content: center;
+flex-direction: column;
+margin-bottom: 24px;
+width: 20px;
+height: 20px;
+}
+

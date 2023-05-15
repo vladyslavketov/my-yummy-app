@@ -6,8 +6,9 @@ import { getCategoriesList, getRecipesByCategory } from "redux/recipes/recipesOp
 import MainTitle from "components/MainTitle/MainTitle";
 import Container from "components/common/Container.styled";
 import RecipeList from "components/RecipeList/RecipeList";
-import { selectCategoriesList, selectCurrentCategory } from "redux/recipes/recipesSelectors";
+import { selectCategoriesList, selectCurrentCategory, selectLoading } from "redux/recipes/recipesSelectors";
 import CategoriesTab from "components/CategoriesTab/CategoriesTab";
+import Loading from "components/Loading/Loading";
 
 const CategoriesPage = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const CategoriesPage = () => {
   const [render, setRender] = useState(1);
   const categoriesList = useSelector(selectCategoriesList);
   const currentCategory = useSelector(selectCurrentCategory);
+  const isLoading = useSelector(selectLoading);
 
   useEffect(() => {
     if (render) {
@@ -27,11 +29,14 @@ const CategoriesPage = () => {
   }, [dispatch, render, categoriesList, name ]);
 
   return (
-    <Container>
-      <MainTitle title={'Categories'} />
-      <CategoriesTab />
-      {currentCategory?.recipes && <RecipeList />}
-    </Container>
+    <>
+      {isLoading && <Loading />}
+      <Container>
+        <MainTitle title={'Categories'} />
+        <CategoriesTab />
+        {currentCategory?.recipes && <RecipeList />}
+      </Container>
+    </>
   );
 };
 
