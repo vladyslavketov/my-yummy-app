@@ -108,4 +108,5 @@ export const authSlise = createSlice({
       })
 });
 
+export const { setIsRefreshing } = authSlise.actions;
 export const authReducer = authSlise.reducer;

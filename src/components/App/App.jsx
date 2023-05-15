@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { refreshUser } from 'redux/auth/authOperation';
 
@@ -10,6 +10,8 @@ import { PrivateRoute, RestrictedRoute } from 'hooks/useRoute';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import UiKit from 'components/UiKit/UiKit';
 import useAuth from 'hooks/useAuth';
+import Loading from 'components/Loading/Loading';
+import { animateScroll } from 'react-scroll';
 // import { animateScroll } from 'react-scroll';
 
 // const { MainPage } = lazy(() => import('pages'));
@@ -19,6 +21,11 @@ const App = () => {
   const { isRefreshing } = useAuth();
   const [render, setRender] = useState(1);
   const theme = false ? themeDark : themeLight;
+  const location = useLocation();
+
+  useEffect(() => {
+    animateScroll.scrollToTop();
+  }, [location]);
 
   useEffect(() => {
     if (render) {
@@ -30,7 +37,7 @@ const App = () => {
   }, [dispatch, render, setRender]);
 
   return isRefreshing ? (
-    'Is refreshing data'
+    <Loading />
   ) : (
     <ThemeProvider theme={theme}>
       <Routes>
