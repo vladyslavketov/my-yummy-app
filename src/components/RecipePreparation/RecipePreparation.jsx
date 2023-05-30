@@ -5,6 +5,7 @@ const instructionsNormalize = ( instructions ) => {
 }
 
 const RecipePreparation = ({ currentRecipe }) => {
+  // console.log("RecipePreparation", currentRecipe[0]);
   const { instructions, preview , title } = currentRecipe;
   const instructionsList = instructionsNormalize(instructions);
 

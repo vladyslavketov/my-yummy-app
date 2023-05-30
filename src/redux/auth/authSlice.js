@@ -17,14 +17,17 @@ Notiflix.Notify.merge({
   position: "center-bottom",
 });
 
+const initialState = {
+  user: { name: null, email: null },
+  token: null,
+  isLoggedIn: false,
+  isRefreshing: true,
+  favorites: [],
+};
+
 export const authSlise = createSlice({
   name: 'auth',
-  initialState: {
-    user: { name: null, email: null },
-    token: null,
-    isLoggedIn: false,
-    isRefreshing: true,
-  },
+  initialState,
   extraReducers: builder =>
     builder
       .addCase(refreshUser.pending, state => {
@@ -69,9 +72,7 @@ export const authSlise = createSlice({
       })
       .addCase(logOut.fulfilled, state => {
         Notify.success(`Goodbye ${state.user.name}!`);
-        state.user = { name: null, email: null };
-        state.token = null;
-        state.isLoggedIn = false;
+        state = initialState;
       })
       // .addCase(changeUserData.fulfilled, (state, action) => {
       //   if (action.payload.name !== '[object HTMLInputElement]') {

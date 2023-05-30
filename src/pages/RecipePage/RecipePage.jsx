@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getRecipesById } from "redux/recipes/recipesOperation";
-import { selectCurrentRecipe } from "redux/recipes/recipesSelectors";
+import { selectCurrentRecipe, } from "redux/recipes/recipesSelectors";
 
 const RecipePage = () => {
   const dispatch = useDispatch();
@@ -18,9 +18,9 @@ const RecipePage = () => {
       setRender(0);
       return;
     }
+    dispatch(getRecipesById(id));
 
-    if ((currentRecipe?._id !== id)) dispatch(getRecipesById(id));
-  }, [dispatch, render, id, currentRecipe ]);
+  }, [render, dispatch, id]);
 
   return (
     <>

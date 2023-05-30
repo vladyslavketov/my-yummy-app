@@ -1,14 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'https://yummy-app-backend.onrender.com/api/';
-
 export const getRecipesPreview = createAsyncThunk(
   'recipes/getRecipesPreview',
   async (_, thunkAPI) => {
     try {
       const res = await axios.get('/recipes/preview');
-      // console.log(res.data);
       return res.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
@@ -42,10 +39,46 @@ export const getRecipesByCategory = createAsyncThunk(
 
 export const getRecipesById = createAsyncThunk(
   'recipes/getRecipesById',
-  
   async (id, thunkAPI) => {
     try {
       const res = await axios.get(`/recipes/${id}`);
+      return res.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const getFavorite = createAsyncThunk(
+  'favorite/getFavorite',
+  async (page, thunkAPI) => {
+    if (!page) page = 1;
+    try {
+      const res = await axios.get(`/recipes/favorites?page=${page}&limit=4`);
+      return res.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const addFavorite = createAsyncThunk(
+  'favorite/addFavorite',
+  async (_id, thunkAPI) => {
+    try {
+      const res = await axios.put(`/recipes/favorites/${_id}`);
+      return res.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const deleteFavorite = createAsyncThunk(
+  'favorite/deleteFavorite',
+  async (_id, thunkAPI) => {
+    try {
+      const res = await axios.patch(`/recipes/favorites/${_id}`);
       return res.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
