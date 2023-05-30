@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.e823ebe9.css",
-    "main.js": "./static/js/main.6bb8c583.js",
-    "static/media/instagram.svg": "./static/media/instagram.6ce45b148b8e100f48c541509cc9c18e.svg",
-    "static/media/twitter.svg": "./static/media/twitter.313d65b03b1be98d3984ea5c114bc20f.svg",
-    "index.html": "./index.html",
-    "static/media/mail.svg": "./static/media/mail.fc4e30aa98f31eedda7aa0f11cdad154.svg",
-    "static/media/lock.svg": "./static/media/lock.4c8693abb7d681bfcc9251d92f02387b.svg",
-    "static/media/youtube.svg": "./static/media/youtube.b93cb94dfd3cbb13f5a03008c3b96190.svg",
-    "static/media/red.svg": "./static/media/red.9dffa3c548a425b2581fb25922c3c0aa.svg",
-    "static/media/trash.svg": "./static/media/trash.86dea47d158d1ae7529f2718bb02e2cc.svg",
-    "static/media/clock.svg": "./static/media/clock.6521cc8abf7aa82709c51f1a4bf40698.svg",
-    "static/media/user.svg": "./static/media/user.043763d7a64775dcc4671c246adb5859.svg",
-    "static/media/yellow.svg": "./static/media/yellow.e0b8838cef8aa334e62f5a69bf5558fe.svg",
-    "static/media/facebook.svg": "./static/media/facebook.cd201640bfd89d6b8f936e1e65e9f1cb.svg",
-    "static/media/green.svg": "./static/media/green.2c20cfce5010676dc2acf065541b3183.svg",
-    "static/media/pick.svg": "./static/media/pick.247b86d0e6a26346bf0885b5b0408bd8.svg",
-    "main.e823ebe9.css.map": "./static/css/main.e823ebe9.css.map",
-    "main.6bb8c583.js.map": "./static/js/main.6bb8c583.js.map"
+    "main.css": "/yummy-app/static/css/main.e823ebe9.css",
+    "main.js": "/yummy-app/static/js/main.336226af.js",
+    "static/media/instagram.svg": "/yummy-app/static/media/instagram.6ce45b148b8e100f48c541509cc9c18e.svg",
+    "static/media/twitter.svg": "/yummy-app/static/media/twitter.313d65b03b1be98d3984ea5c114bc20f.svg",
+    "index.html": "/yummy-app/index.html",
+    "static/media/mail.svg": "/yummy-app/static/media/mail.fc4e30aa98f31eedda7aa0f11cdad154.svg",
+    "static/media/lock.svg": "/yummy-app/static/media/lock.4c8693abb7d681bfcc9251d92f02387b.svg",
+    "static/media/youtube.svg": "/yummy-app/static/media/youtube.b93cb94dfd3cbb13f5a03008c3b96190.svg",
+    "static/media/red.svg": "/yummy-app/static/media/red.9dffa3c548a425b2581fb25922c3c0aa.svg",
+    "static/media/trash.svg": "/yummy-app/static/media/trash.86dea47d158d1ae7529f2718bb02e2cc.svg",
+    "static/media/clock.svg": "/yummy-app/static/media/clock.6521cc8abf7aa82709c51f1a4bf40698.svg",
+    "static/media/user.svg": "/yummy-app/static/media/user.043763d7a64775dcc4671c246adb5859.svg",
+    "static/media/yellow.svg": "/yummy-app/static/media/yellow.e0b8838cef8aa334e62f5a69bf5558fe.svg",
+    "static/media/facebook.svg": "/yummy-app/static/media/facebook.cd201640bfd89d6b8f936e1e65e9f1cb.svg",
+    "static/media/green.svg": "/yummy-app/static/media/green.2c20cfce5010676dc2acf065541b3183.svg",
+    "static/media/pick.svg": "/yummy-app/static/media/pick.247b86d0e6a26346bf0885b5b0408bd8.svg",
+    "main.e823ebe9.css.map": "/yummy-app/static/css/main.e823ebe9.css.map",
+    "main.336226af.js.map": "/yummy-app/static/js/main.336226af.js.map"
   },
   "entrypoints": [
     "static/css/main.e823ebe9.css",
-    "static/js/main.6bb8c583.js"
+    "static/js/main.336226af.js"
   ]
 }
